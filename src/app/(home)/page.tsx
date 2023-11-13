@@ -1,4 +1,4 @@
-import { Box, Button, ButtonBase, Container, Divider, Typography } from '@mui/material'
+import { Box, Button, Container, Typography } from '@mui/material'
 import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
@@ -10,7 +10,7 @@ import Image_React from '@/assets/react-logo.svg';
 import Image_Hero from '@/assets/neureact-app.webp';
 
 import GitHubIcon from '@mui/icons-material/GitHub';
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import Snippet from '@/components/Snippet';
 
 function Home() {
   return (
@@ -19,10 +19,12 @@ function Home() {
         <Typography sx={{ fontWeight: 500 }} variant='h1'>NeuReact</Typography>
         <Typography sx={{ maxWidth: 650, mx: "auto", mt:1 }}>Welcome to Neureact, a powerful tool that seamlessly integrates React with NeutralinoJs, providing a robust platform for building cross-platform desktop applications. With Neureact, you can leverage the power of React components and Neutralino&apos;s lightweight runtime to create efficient and user-friendly desktop applications.</Typography>
         <Button component={Link} href="/documentation" variant="outlined" size="large" sx={{ borderRadius: 100, textTransform: "capitalize", mt:4 }}>Get Started</Button>
-        <ButtonBase sx={{ my:5, py:1.5, px: 3, borderRadius: 3, bgcolor: "#1a1a1a", width: "fit-content", mx: "auto", display: "flex", alignItems: "center" }}>
-          <Typography sx={{ mr:1, mb: 0.2 }}>npx create-neureact-app</Typography>
-          <ContentCopyIcon fontSize="small" />
-        </ButtonBase>
+        <Snippet
+          code="npx create-neureact-app"
+          sx={{
+            mx: "auto",
+          }}
+        />
       </Container>
       <Box sx={{ bgcolor: "#1a1a1a" }}>
         <Container sx={{ textAlign: "center", py: 15 }}>
@@ -66,10 +68,6 @@ function Home() {
             </Box>
 
         </Container>
-      </Box>
-      <Divider />
-      <Box sx={{ bgcolor: "#1a1a1a" }}>
-        <Container sx={{ py:2, textAlign: "right" }}>Made with ❤️ by Kasmira Wijayathunga</Container>
       </Box>
     </>
   )

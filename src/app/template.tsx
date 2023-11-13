@@ -9,6 +9,7 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 import DrawerAppBar from '@/components/DrawerAppBar';
+import Footer from '@/components/Footer';
 
 function Theme({ children, }: { children: React.ReactNode }) {
 
@@ -29,6 +30,7 @@ function Theme({ children, }: { children: React.ReactNode }) {
         <CssBaseline />
         <DrawerAppBar />
         {children}
+        <Footer />
     </ThemeProvider>
   )
 }
